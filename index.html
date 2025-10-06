@@ -1,76 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ExploreWorld - Travel Recommendations</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Recommendation Platform</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="logo">🌍 ExploreWorld</div>
-    <ul class="nav-links">
-      <li><a href="#" id="home-link">Home</a></li>
-      <li><a href="#" id="about-link">About Us</a></li>
-      <li><a href="#" id="contact-link">Contact Us</a></li>
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">🌍 Travel Explorer</div>
+    <ul>
+      <li><a href="#" onclick="displayRecommendations()">Home</a></li>
+      <li><a href="#" onclick="showAboutUs()">About Us</a></li>
+      <li><a href="#" onclick="showContactUs()">Contact Us</a></li>
     </ul>
   </nav>
 
-  <!-- Search Section -->
-  <section class="search-section" id="search-section">
-    <input type="text" id="search-input" placeholder="Search destinations..." />
-    <button id="search-btn">Search</button>
-    <button id="clear-btn" class="clear">Clear</button>
+  <!-- Search -->
+  <section class="search-container">
+    <input type="text" id="searchInput" placeholder="Search destinations...">
+    <button id="searchButton">Search</button>
+    <button id="clearButton">Clear</button>
   </section>
 
-  <!-- Hero Section -->
-  <section class="hero" id="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Discover Your Next Adventure</h1>
-      <p>Unleash your wanderlust — explore hidden gems, experience diverse cultures, and create unforgettable memories.</p>
-      <button class="book-btn">Book Now</button>
-      <div class="social-media">
-        <a href="#">🌐</a>
-        <a href="#">📸</a>
-        <a href="#">✈️</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Search Results -->
+  <!-- Results -->
   <section id="results"></section>
 
-  <!-- About Us Section -->
-  <section id="about-section" class="hidden fade-section">
-    <h2>About ExploreWorld</h2>
-    <p>
-      At <strong>ExploreWorld</strong>, we believe travel is a journey of discovery —
-      from majestic mountains to vibrant cities, each destination has a story to tell.
-      Our mission is to inspire and simplify your adventures, one recommendation at a time.
-    </p>
-    <div class="about-gallery">
-      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach">
-      <img src="https://images.unsplash.com/photo-1505761671935-60b3a7427bad" alt="Mountains">
-      <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1" alt="City">
-    </div>
-  </section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Travel Recommendation Platform. All rights reserved.</p>
+  </footer>
 
-  <!-- Contact Us Section -->
-  <section id="contact-section" class="hidden fade-section">
-    <h2>Contact Us</h2>
-    <p>We’d love to hear from you! Send us a message and we’ll get back soon.</p>
-    <form id="contact-form">
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" rows="4" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
-
+  <script src="script.js"></script>
 </body>
 </html>
