@@ -135,7 +135,7 @@ function showContactUs() {
     <div class="category-section contact-section">
       <h2>Contact Us</h2>
       <div class="contact-content">
-        <div>
+        <div class="contact-info">
           <p>
             📧 Email: <a href="mailto:contact@travelexplorer.com">contact@travelexplorer.com</a><br>
             📞 Phone: +123 456 7890<br>
@@ -146,11 +146,24 @@ function showContactUs() {
             feel free to get in touch. Let’s make travel dreams come true!
           </p>
         </div>
-        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Contact">
+        <form id="contactForm" class="contact-form">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+          <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
       </div>
     </div>
   `;
+
+  const contactForm = document.getElementById("contactForm");
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    alert("Thank you for your message! We’ll get back to you soon.");
+    contactForm.reset();
+  });
 }
+
 
 
 searchButton.addEventListener("click", searchDestinations);
